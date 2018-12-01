@@ -32,3 +32,16 @@ print(f'Total: $ {sum_profitloss}')
 print(f'Average Change: $ {average_profitloss}')
 print(f'Greatest Increase in Profits: {max_change["Date"]} ($ {max_change["Profit/Loss"]})')
 print(f'Greatest Decrease in Profits: {min_change["Date"]} ($ {min_change["Profit/Loss"]})')
+
+# Write data summary to file
+file = open("output.txt", "w")
+file.write("Financial Analysis:\n")
+file.write("----------------------------\n")
+file.write(f'Total Months: {count}\n')
+file.write(f'Total: $ {sum_profitloss}\n')
+file.write(f'Average Change: $ {average_profitloss}\n')
+file.write(f'Greatest Increase in Profits: {max_change["Date"]} ($ {max_change["Profit/Loss"]})\n')
+file.write(f'Greatest Decrease in Profits: {min_change["Date"]} ($ {min_change["Profit/Loss"]})\n')
+file.close()
+
+
