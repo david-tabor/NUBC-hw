@@ -1,7 +1,9 @@
-import csv
+import os, csv
 
-csvreader = csv.reader(open("budget_data.csv"))
-next(csvreader)
-
-for row in csvreader:
-    print(row)
+# Read in budget_data.csv
+csv_path = os.path.join(".", "budget_data.csv")
+with open(csv_path) as csv_file:
+    csv_reader = csv.reader(csv_file, delimiter=",")
+    next(csv_reader, None)
+    for row in csv_reader:
+        print(row)
