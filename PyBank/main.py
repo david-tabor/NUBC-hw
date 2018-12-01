@@ -10,7 +10,6 @@ with open(csv_path) as csv_file:
         data.append({"Date": row[0], "Profit/Loss": float(row[1])})
 
 # Generate summary statistics
-
 count = len(data)
 sum_profitloss = 0.0
 max_change = {"Date": "", "Profit/Loss": 0.0}
