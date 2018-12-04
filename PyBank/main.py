@@ -32,7 +32,7 @@ for row in data:
     if row["PL Delta"] < min_change["PL Delta"]:
         min_change["Date"] = row["Date"]
         min_change["PL Delta"] = row["PL Delta"]
-average_pldelta = sum_pldelta / (   count-1)
+average_pldelta = sum_pldelta / (count-1) # There is one fewer delta than there are months
  
 # Print data summary
 print("Financial Analysis:")
