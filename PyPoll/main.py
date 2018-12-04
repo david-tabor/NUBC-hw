@@ -38,7 +38,7 @@ print(f'Total Votes: {total_vote_count}')
 print(f'-------------------------')
 for election_result in election_results:
     print(f'{election_result["candidate"]}: ' 
-    + f'{round(election_result["votes"]/total_vote_count*100.0,5)}% '
+    + f'{round(election_result["votes"]/total_vote_count*100.0,3)}% '
     + f'({election_result["votes"]})')
 print(f'-------------------------')
 print(f'Winner: {winner}')
@@ -52,7 +52,7 @@ file.write(f'Total Votes: {total_vote_count}\n')
 file.write(f'-------------------------\n')
 for election_result in election_results:
     file.write(f'{election_result["candidate"]}: ' 
-    + f'{round(election_result["votes"]/total_vote_count*100.0,5)}% '
+    + f'{round(election_result["votes"]/total_vote_count*100.0,3)}% '
     + f'({election_result["votes"]})\n')
 file.write(f'-------------------------\n')
 file.write(f'Winner: {winner}\n')
